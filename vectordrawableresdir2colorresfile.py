@@ -685,9 +685,9 @@ def get_colors(root: str) -> Counter:
     for drawable in get_files_recursive(root, ext_include_list=[".xml"]):
         with open(drawable) as file:
             for line in file.readlines():
-                m = re.search(HEX_XML_COLOR_RE, line)
+                m = re.findall(HEX_XML_COLOR_RE, line)
                 if m:
-                    ctr.update([m.group(1)])
+                    ctr.update(m)
 
     return ctr
 
