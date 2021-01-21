@@ -1,4 +1,4 @@
-# Converts a vector drawable resource directory into a color resource file.
+# Converts a vector drawable resource directory into a color resource file
 
 This is used to find and replace usages of colors in vector drawables (e.g., to force usage of colors in the Material Design spec only).
 
