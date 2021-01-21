@@ -4,6 +4,9 @@ This is used to find and replace usages of colors in vector drawables (e.g., to 
 
 ## Table of Contents
 
+<details>
+<summary>"Click to expand"</summary>
+
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [Requirements](#requirements)
@@ -12,6 +15,8 @@ This is used to find and replace usages of colors in vector drawables (e.g., to 
 -   [Built with](#built-with)
 -   [Attributions](#attributions)
 -   [Acknowledgments](#acknowledgments)
+
+</details>
 
 ## Installation
 
