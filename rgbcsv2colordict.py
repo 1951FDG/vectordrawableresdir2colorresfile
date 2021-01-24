@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# rgbcsv2colordict.py
 # by 1951FDG, Wilson Mar
-# Usage: python3 rgbcsv2colordict.py @Material-Design-Color.palette.csv
-# Open resulting file rgbcsv2colordict.py.txt and paste into vectordrawableresdir2colorresfile.py
 
 from __future__ import print_function
 

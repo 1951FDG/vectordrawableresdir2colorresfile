@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# vectordrawableresdir2colorresfile.py
 # by 1951FDG, James Bennett, Orsiris de Jong, Wilson Mar, Ayush Pareek, Paarth Neekhara
-# Usage: python3 vectordrawableresdir2colorresfile.py ../MyApplication/app/src/main/res/drawable
-# To ensure this has no external dependencies, an array and dictionary is used in place of I/O from input reference files.
 
 import colorsys
 import csv
@@ -14,10 +10,11 @@ from fnmatch import fnmatch
 from typing import NamedTuple, Tuple, Union
 
 import numpy as np
+
 from scipy import spatial
 
 HEX_COLOR_RE = re.compile(r"^#([a-fA-F0-9]{3}|[a-fA-F0-9]{6})$")
-HEX_XML_COLOR_RE = r"\"(#[a-fA-F0-9]{3}|#[a-fA-F0-9]{6})\""
+HEX_XML_COLOR_RE = re.compile(r"\"(#[a-fA-F0-9]{3}|#[a-fA-F0-9]{6})\"")
 
 IntegerRGB = NamedTuple("IntegerRGB", [("red", int), ("green", int), ("blue", int)])
 IntTuple = Union[IntegerRGB, Tuple[int, int, int]]
@@ -685,7 +682,7 @@ def get_colors(root: str) -> Counter:
     for drawable in get_files_recursive(root, ext_include_list=[".xml"]):
         with open(drawable) as file:
             for line in file.readlines():
-                m = re.findall(HEX_XML_COLOR_RE, line)
+                m = HEX_XML_COLOR_RE.findall(line)
                 if m:
                     ctr.update(m)
 

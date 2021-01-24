@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# rgbcsv2colorarray.py
 # by 1951FDG, Wilson Mar
-# Usage: python3 rgbcsv2colorarray.py @Material-Design-Color.palette.csv
-# Open resulting file rgbcsv2colorarray.py.txt and paste into vectordrawableresdir2colorresfile.py
 
 from __future__ import print_function
 
