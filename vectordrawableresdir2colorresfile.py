@@ -735,7 +735,7 @@ def save_xml(in_file: str, out_file: str):
         else:
             comment_2 = ""
 
-        out_f.write("    " + '<color name="' + name.replace(" ", "_") + '">' + color + "</color>")
+        out_f.write("    " + '<color name="' + name.replace(" ", "_").lower() + '">' + color.upper() + "</color>")
         out_f.write(comment_1)
         out_f.write(comment_2)
         out_f.write("\r\n")
